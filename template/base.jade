@@ -1,0 +1,76 @@
+html
+    head
+        block title
+
+        script(src="https://use.typekit.net/jdb5cpn.js")
+        script
+            try{Typekit.load({ async: true });}catch(e){}
+        +h.headers
+        +h.load('/template/style.scss', 'font')
+
+
+
+    body
+        .side
+            .info_site
+                #credit
+                    span= '&#169;'
+                    span= site.now.year
+                    span= site.title
+                #count
+                    span= '%s篇文章' %(d.get_data(types='post', return_count=true, with_page=false))
+                    span= '%s字' %('{0:,}'.format(site.text_words))
+                #poweredby
+                    a(href='https://mytrix.in/post/zi-zhi/bitcron-theme-fruit', target='_blank') 主题「瓜」
+                    a(href='https://bitcron.com', target='_blank') Powered by Bitcron
+
+            .maininfo_side
+                .header_site
+                    h1.name_site(href='/')=  site.title
+                    span.description_site= site.configs.sub_title
+
+                .nav_site
+                    a.nav_button(href="/")
+                        .bg_control
+                            span.item_nav_button 主页
+                        .bg_nav_button(style='background-image: url(/template/image/button_home.png), linear-gradient(#FFCEA5, #FFCEA5); background-repeat: no-repeat; background-size: contain;')
+
+                    a.nav_button(href="/categories")
+                        .bg_control
+                            span.item_nav_button 分类
+                        .bg_nav_button(style='background-image: url(/template/image/button_category.png), linear-gradient(#FFEEDF, #FFEEDF); background-repeat: no-repeat; background-size: contain;')
+
+                    a.nav_button(href="/xxxxxxx")
+                        .bg_control
+                            span.item_nav_button 提问 //这个地方并不是站内链接，你想放别的也行
+                        .bg_nav_button(style='background-image: url(/template/image/button_ask.png), linear-gradient(#FFD8B7, #FFD8B7); background-repeat: no-repeat; background-size: contain;')
+
+                    a.nav_button(href="/about") 
+                        .bg_control
+                            span.item_nav_button 关于
+                        .bg_nav_button(style='background-image: url(/template/image/button_about.png), linear-gradient(#FFEEDF, #FFEEDF); background-repeat: no-repeat; background-size: contain;')
+
+                    a.nav_button(href="/feed") 
+                        .bg_control
+                            span.item_nav_button 订阅
+                        .bg_nav_button(style='background-image: url(/template/image/button_feed.png), linear-gradient(#FFE9D7, #FFE9D7); background-repeat: no-repeat; background-size: contain;')
+
+
+                .about_site
+                    p.about_paragraph
+                        span.about_line 请在这里写一大堆自我介绍，不要太长，也不宜太短
+                        span.about_line 请在这里写一大堆自我介绍，不要太长，也不宜太短
+                        span.about_line 请在这里写一大堆自我介绍，不要太长，也不宜太短
+                        span.about_line 请在这里写一大堆自我介绍，不要太长，也不宜太短
+                    p.about_paragraph
+                        span.about_line 请在这里写一大堆自我介绍，不要太长，也不宜太短
+                        span.about_line 请在这里写一大堆自我介绍，不要太长，也不宜太短
+                    p.about_paragraph
+                        span.about_link_span 联系我☞
+                        a.about_link(href="http://weibo.com/xxxxx") 微博 //这里填微博
+                        a.about_link(href="mailto:xxxx@xxxxx.com") 邮件 //这里填邮件，随便改改写别的也行
+            .bg_site(style='background-image: url(/template/image/Flower_01.svg)')
+
+
+        .content_site
+            block content

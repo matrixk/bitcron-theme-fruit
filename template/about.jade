@@ -1,0 +1,33 @@
+html
+    head
+        block title
+        title=  '关于博主 - ' + site.title
+
+        script(src="https://use.typekit.net/jdb5cpn.js")
+        script
+            try{Typekit.load({ async: true });}catch(e){}
+        +h.headers
+        +h.load('/template/post.scss', 'font')
+
+    #post
+        .return
+            a.back_to_home(href="/")="BACK"
+        img.about_icon(src=site.site_avatar, alt=site.title)
+        h1.post_title= "「" + site.title + "」"
+        .post_info
+            span.contact 联系方式
+            a.tag(href='https://weibo.com/xxx')='微博' //这里填各种联系方式
+        .post_content
+            h1 关于博主
+            p
+                span 这里写关于我
+                span 这里写关于我
+                span 这里写关于我
+                span 这里写关于我
+            h1 其他内容
+            ul 
+                li 比如技能列表
+                li 比如个人简历
+            p
+                span 反正你能想到的
+                span 就随便往上写吧

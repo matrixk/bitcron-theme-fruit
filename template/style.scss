@@ -1,0 +1,744 @@
+/*
+Theme: Fruit
+Theme URI: https://mytrix.in/post/zi-zhi/bitcron-theme-fruit
+Author: Mytrix
+Author URI: https://mytrix.in/
+Copyright: © 2018 Mytrix
+*/
+
+
+/*Basic-----------------------------------------------------*/
+body {
+    background-image: linear-gradient(150deg, #fee9d7 0%, #f9bf8f 100%);
+    background-attachment: fixed;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    font-size: 1.1em;
+    line-height: 1.8em;
+    font-family: source-han-serif-sc, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    font-weight: 100;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+span {
+    a {
+    text-indent: 0em;
+    }
+}
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/*Side-----------------------------------------------------*/
+
+.side {
+    text-align: right;
+    position: fixed;
+    left: 50px;
+    top: 0;
+    width: 40vw;
+    height: 100%;
+    color: #555;
+    padding: 22px 2vw 0 2vw;
+    overflow: hidden;
+    a {
+        color: #555;
+        transition: all 0.5s;
+        &:hover {
+            color: #f9bf8f;
+        }
+    }
+}
+
+.info_site {
+    line-height: 1.8em;
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    font-size: 0.8em;
+}
+
+.maininfo_side {
+    right: 1em;
+    bottom: 2.3em;
+    position: absolute;
+    .header_site {
+        .name_site {
+            font-weight: bold;
+            display: inline;
+            font-size: 3em;
+            letter-spacing: 0.2em;
+            color: #fff;
+            background: #e2434b;
+            padding: 0px 0.1em 0 0.3em;
+            border-radius: 10px;
+            transition: all 0.5s;
+            &:hover {
+                color: #34222e;
+                background: none;
+            }
+        }
+        .description_site {
+            display: block;
+            font-size: 1.5em;
+            color: #34222e;
+            border-bottom: #34222e dotted 2px;
+            margin: 1em 0;
+            transition: all 0.5s;
+            &:hover {
+                color: #e2434b;
+                border-bottom: #e2434b dotted 2px;
+            }
+        }
+    }
+}
+
+.nav_site {
+    display: flex;
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    .nav_button {
+        margin-left: 6px;
+        display: block;
+        width: 100px;
+        float: left;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        .bg_control {
+            opacity: 0;
+            height: 100px;
+            overflow: hidden;
+            box-sizing: border-box;
+            background: rgba(52, 34, 46, 0.7);
+            color: #fff;
+            transition: all 0.5s;
+            .item_nav_button {
+                display: inline-block;
+                font-weight: bold;
+                max-width: 100%;
+                max-height: 100px;
+                overflow: hidden;
+                line-height: 100px;
+            }
+        }
+        .bg_nav_button {
+            background-blend-mode: multiply;
+            width: 100px;
+            height: 100px;
+            z-index: -10;
+            margin-top: -100px;
+            position: relative;
+        }
+        &:hover {
+            transform: translate3D(0, -5px, 0);
+            .bg_control {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.about_site {
+    display: inline-block;
+    .about_paragraph {
+        .about_line {
+            display: block;
+            font-size: 0.9em;
+            transition: all 0.5s;
+            &:hover {
+                color: #000000;
+            }
+        }
+        .about_link {
+            background: #34222e;
+            color: #fee9d7;
+            padding: 0 8px;
+            &:hover {
+                color: #e2434b;
+                background: #ffffff;
+            }
+        }
+    }
+}
+
+.bg_site {
+    width: inherit;
+    height: -webkit-fill-available;
+    background-repeat: no-repeat;
+    z-index: -100;
+    right: -12em;
+    top: 1em;
+    position: absolute;
+}
+
+/*Content-----------------------------------------------------*/
+
+.content_site {
+    margin-left: 47vw;
+    margin-right: 2vw;
+    position: fixed;
+    .post_list_site {
+        color: #333;
+        max-width: 800px;
+        margin-right: 2em;
+        position: fixed;
+        bottom: 5em;
+        top: 1em;
+        overflow: auto;
+        background: #fff;
+        padding: 1em 2em;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.labeltitle {
+    text-align: center;
+    margin: 1em 0;
+    color: #f9bf8f;
+}
+
+.post_list_site {
+    margin: 0 2em;
+}
+
+.post_list_item {
+    margin-bottom: 2em;
+    .post_title {
+        font-weight: bold;
+        border-bottom: #e2434b dotted 2px;
+        background: none;
+        color: #34222e;
+        transition: all 0.5s;
+        &:hover {
+            color: #fff;
+            background: #34222e;
+        }
+    }
+    .post_info {
+        time {
+            font-size: 0.8em;
+            background: #e2434b;
+            color: #fff;
+            padding: 0 5px;
+            transition: all 0.5s;
+            &:hover {
+                color: #e2434b;
+                background: none;
+            }
+        }
+        .cat, .tag {
+            color: #f9bf8f;
+            font-size: 0.8em;
+            background: #fee9d7;
+            padding: 0 5px;
+            transition: all 0.5s;
+            &:hover {
+                color: #fee9d7;
+                background: none;
+            }
+        }
+    }
+}
+
+/*Archive-----------------------------------------------------*/
+
+.post_list_arch {
+    margin: 0 2em;
+    color: #333;
+    max-width: 800px;
+    position: fixed;
+    bottom: 2.3em;
+    top: 1em;
+    overflow: auto;
+    background: #fff;
+    padding: 1em 2em;
+    .post_title_arch {
+        font-weight: bold;
+        font-size: 1.3em;
+        border-bottom: #f9bf8f dotted 2px;
+        color: #34222e;
+        transition: all 0.5s;
+        &:hover {
+            color: #cef0b9;
+        }
+    }
+    .archlist {
+        .post_title {
+            font-size: 1.3em;
+        }
+        .archive_block {
+            display: flex;
+            flex-wrap: wrap;
+            .archive_item {
+                width: 29%;
+                margin: 0 0.5em;
+            }
+        }
+        .archive_summary {
+            display: block;
+        }
+        a {
+            color: #000;
+            transition: all 0.5s;
+            &:hover {
+                color: #f9bf8f;
+            }
+        }
+    }
+}
+
+/*Pager-----------------------------------------------------*/
+
+.paginator_container.pagination_container {
+    position: fixed;
+    margin: 0 2em;
+    bottom: 2em;
+    padding: 0 10px 0 0;
+    .next, .prev {
+        color: #34222e;
+    }
+    .page-number {
+        color: #34222e;
+        border: #34222e solid 1px;
+        padding: 0 8px;
+        background: none;
+        transition: all 0.5s;
+        &:hover {
+            color: #fff;
+            background: #34222e;
+        }
+    }
+}
+
+/*Responsive-----------------------------------------------------*/
+
+@media all and (min-width: 921px) and (max-width: 1245px) {
+
+    .info_site {
+        line-height: 1.5em;
+        font-size: 0.8em;
+    }
+
+    .maininfo_side {
+        .header_site {
+            .name_site {
+                font-size: 2em;
+            }
+            .description_site {
+                font-size: 1.2em;
+                margin: 1em 0;
+            }
+        }
+    }
+
+.about_site {
+    display: inline-block;
+    line-height: 1.5em;
+    .about_paragraph {
+        .about_line {
+            display: block;
+            font-size: 0.8em;
+            transition: all 0.5s;
+            &:hover {
+                color: #000000;
+            }
+        }
+        .about_link {
+            background: #34222e;
+            color: #fee9d7;
+            padding: 0 8px;
+            &:hover {
+                color: #e2434b;
+                background: #ffffff;
+            }
+        }
+    }
+}
+
+    .nav_site {
+        .nav_button {
+            width: 60px;
+            .bg_control {
+                height: 60px;
+                .item_nav_button {
+                    max-height: 60px;
+                    line-height: 60px;
+                }
+            }
+            .bg_nav_button {
+                width: 60px;
+                height: 60px;
+                margin-top: -60px;
+            }
+        }
+    }
+
+    .bg_site {
+        right: -6em;
+    }
+    
+    .post_list_arch {
+        .archlist {
+            .archive_block {
+                .archive_item {
+                    width: 40%;
+                }
+            }
+        }
+    }
+
+}
+
+@media all and (min-width: 450px) and (max-width: 921px) {
+
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .side {
+        text-align: center;
+        position: inherit;
+        width: 100%;
+        padding: 2em 0;
+    }
+
+    .info_site {
+        display: none;
+    }
+
+    .maininfo_side {
+        right: inherit;
+        bottom: inherit;
+        position: relative;
+        margin: 2em 0 0 0;
+        .header_site {
+            .name_site {
+                font-size: 2em;
+            }
+            .description_site {
+                font-size: 1.2em;
+                margin: 0.5em ;
+            }
+        }
+    }
+    
+    .nav_site {
+        display: inline-block;
+        margin: 0.5em auto;
+        float: inherit;
+        .nav_button {
+            margin-bottom: 6px;
+            width: 60px;
+            .bg_control {
+                height: 60px;
+                .item_nav_button {
+                    max-height: 60px;
+                    line-height: 60px;
+                }
+            }
+            .bg_nav_button {
+                width: 60px;
+                height: 60px;
+                margin-top: -60px;
+            }
+        }
+    }
+    
+    .about_site {
+        margin: 0 1.5em;
+        font-size: 0.8em;
+        line-height: 1.8em;
+        text-align: left;
+    }
+
+    .bg_site {
+        top: 11em;
+        right: 5em;
+    }
+    
+    .paginator_container.pagination_container {
+        position: relative;
+        margin: 1em 0;
+        bottom: 0;
+        padding: 0;
+    }
+    
+    .content_site {
+        margin: 0 0.5em 2em 0.5em;
+        position: relative;
+        .post_list_site {
+            color: #333;
+            max-width: unset;
+            margin: 0;
+            position: relative;
+            bottom: unset;
+            top: unset;
+            overflow: auto;
+            background: #fff;
+            padding: 1em 2em;
+        }
+        .post_list_arch {
+            color: #333;
+            max-width: unset;
+            margin: 0;
+            position: relative;
+            bottom: unset;
+            top: unset;
+            overflow: auto;
+            background: #fff;
+            padding: 1em 2em;
+            .archlist {
+                .archive_block {
+                    .archive_item {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
+
+@media (min-width: 343px) and (max-width: 450px) {
+
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .side {
+        text-align: center;
+        position: inherit;
+        width: 100%;
+        padding: 2em 0;
+    }
+
+    .info_site {
+        display: none;
+    }
+
+    .maininfo_side {
+        right: inherit;
+        bottom: inherit;
+        position: relative;
+        margin: 2em 0 0 0;
+        .header_site {
+            .name_site {
+                font-size: 2em;
+            }
+            .description_site {
+                font-size: 1.2em;
+                margin: 0.5em ;
+            }
+        }
+    }
+    
+    .nav_site {
+        display: inline-block;
+        margin: 0.5em auto;
+        float: inherit;
+        .nav_button {
+            width: 60px;
+            .bg_control {
+                height: 60px;
+                .item_nav_button {
+                    max-height: 60px;
+                    line-height: 60px;
+                }
+            }
+            .bg_nav_button {
+                width: 60px;
+                height: 60px;
+                margin-top: -60px;
+            }
+        }
+    }
+    
+    .about_site {
+        height: 6em;
+        overflow: auto;
+        margin: 0 1.5em;
+        font-size: 0.8em;
+        line-height: 1.8em;
+        text-align: left;
+    }
+
+    .bg_site {
+        top: 1em;
+        right: -7em;
+    }
+    
+    .paginator_container.pagination_container {
+        position: relative;
+        margin: 1em 0;
+        bottom: 0;
+        padding: 0;
+    }
+    
+    .content_site {
+        margin: 0 0.5em 2em 0.5em;
+        position: relative;
+        .post_list_site {
+            color: #333;
+            max-width: unset;
+            margin: 0;
+            position: relative;
+            bottom: unset;
+            top: unset;
+            overflow: auto;
+            background: #fff;
+            padding: 1em;
+        }
+        .post_list_arch {
+            color: #333;
+            max-width: unset;
+            margin: 0;
+            position: relative;
+            bottom: unset;
+            top: unset;
+            overflow: auto;
+            background: #fff;
+            padding: 1em;
+            .archlist {
+                .archive_block {
+                    .archive_item {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 343px) {
+
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .side {
+        text-align: center;
+        position: inherit;
+        width: 100%;
+        padding: 2em 0;
+    }
+
+    .info_site {
+        display: none;
+    }
+
+    .maininfo_side {
+        right: inherit;
+        bottom: inherit;
+        position: relative;
+        margin: 2em 0 0 0;
+        .header_site {
+            .name_site {
+                font-size: 2em;
+            }
+            .description_site {
+                font-size: 1.2em;
+                margin: 0.5em ;
+            }
+        }
+    }
+    
+    .nav_site {
+        display: inline-block;
+        margin: 0.5em auto;
+        float: inherit;
+        .nav_button {
+            width: 50px;
+            .bg_control {
+                height: 50px;
+                .item_nav_button {
+                    max-height: 50px;
+                    line-height: 50px;
+                }
+            }
+            .bg_nav_button {
+                width: 50px;
+                height: 50px;
+                margin-top: -50px;
+            }
+        }
+    }
+    
+    .about_site {
+        height: 6em;
+        overflow: auto;
+        margin: 0 1.5em;
+        font-size: 0.8em;
+        line-height: 1.8em;
+        text-align: left;
+    }
+
+    .bg_site {
+        top: -1em;
+        right: -4em;
+    }
+    
+    .paginator_container.pagination_container {
+        position: relative;
+        margin: 1em 0;
+        bottom: 0;
+        padding: 0;
+    }
+    
+    .content_site {
+        margin: 0 0.5em 2em 0.5em;
+        position: relative;
+        .post_list_site {
+            color: #333;
+            max-width: unset;
+            margin: 0;
+            position: relative;
+            bottom: unset;
+            top: unset;
+            overflow: auto;
+            background: #fff;
+            padding: 1em;
+        }
+        .post_list_arch {
+            color: #333;
+            max-width: unset;
+            margin: 0;
+            position: relative;
+            bottom: unset;
+            top: unset;
+            overflow: auto;
+            background: #fff;
+            padding: 1em;
+            .archlist {
+                .archive_block {
+                    .archive_item {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}
