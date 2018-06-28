@@ -82,6 +82,7 @@ table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th {
     .return {
         text-align: center;
         a.back_to_home {
+            font-size: 0.8em;
             color: #c3c3c3;
             transition: all 0.8s;
             &::before {
