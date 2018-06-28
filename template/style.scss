@@ -9,7 +9,8 @@ Copyright: © 2018 Mytrix
 
 /*Basic-----------------------------------------------------*/
 body {
-    background-image: linear-gradient(150deg, #fee9d7 0%, #f9bf8f 100%);
+    /*background-image: linear-gradient(150deg, #ffe4ce 0%, #ffaf84 100%);*/
+    background: #f9f8ed;
     background-attachment: fixed;
     height: -webkit-fill-available;
     overflow: hidden;
@@ -48,14 +49,14 @@ img {
     top: 0;
     width: 40vw;
     height: 100%;
-    color: #555;
+    color: #6a9c77;
     padding: 22px 2vw 0 2vw;
     overflow: hidden;
     a {
-        color: #555;
+        color: #aaaaaa;
         transition: all 0.5s;
         &:hover {
-            color: #f9bf8f;
+            color: #fff1bc;
         }
     }
 }
@@ -78,26 +79,24 @@ img {
             display: inline;
             font-size: 3em;
             letter-spacing: 0.2em;
-            color: #fff;
-            background: #e2434b;
+            color: #ffffff;
+            background: #6a9c78;
             padding: 0px 0.1em 0 0.3em;
             border-radius: 10px;
             transition: all 0.5s;
             &:hover {
-                color: #34222e;
-                background: none;
+                background: #c4e3cb;
             }
         }
         .description_site {
             display: block;
             font-size: 1.5em;
-            color: #34222e;
-            border-bottom: #34222e dotted 2px;
+            color: #6a9c77;
+            border-bottom: #fff1bc dotted 2px;
             margin: 1em 0;
             transition: all 0.5s;
             &:hover {
-                color: #e2434b;
-                border-bottom: #e2434b dotted 2px;
+                color: #c4e3cb;
             }
         }
     }
@@ -111,6 +110,7 @@ img {
     list-style: none;
     text-align: center;
     .nav_button {
+        border-radius: 10px;
         margin-left: 6px;
         display: block;
         width: 100px;
@@ -121,8 +121,9 @@ img {
             height: 100px;
             overflow: hidden;
             box-sizing: border-box;
-            background: rgba(52, 34, 46, 0.7);
-            color: #fff;
+            border-radius: 10px;
+            background: rgba(255, 241, 188, 0.8);
+            color: #6a9c78;
             transition: all 0.5s;
             .item_nav_button {
                 display: inline-block;
@@ -134,7 +135,9 @@ img {
             }
         }
         .bg_nav_button {
-            background-blend-mode: multiply;
+            background-blend-mode: unset;
+            border-radius: 10px;
+            /*box-shadow: #fff 0 0 5px;*/
             width: 100px;
             height: 100px;
             z-index: -10;
@@ -158,16 +161,17 @@ img {
             font-size: 0.9em;
             transition: all 0.5s;
             &:hover {
-                color: #000000;
+                color: #c4e3cb;
             }
         }
         .about_link {
-            background: #34222e;
-            color: #fee9d7;
+            background: none;
+            border: #aaaaaa solid 1px;
+            color: #aaaaaa;
             padding: 0 8px;
             &:hover {
-                color: #e2434b;
-                background: #ffffff;
+                color: #ffffff;
+                background: #6a9c77;
             }
         }
     }
@@ -199,14 +203,14 @@ img {
         overflow: auto;
         background: #fff;
         padding: 1em 2em;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        box-shadow: #fff1bc 0 0 10px;
     }
 }
 
 .labeltitle {
     text-align: center;
     margin: 1em 0;
-    color: #f9bf8f;
+    color: #6a9c78;
 }
 
 .post_list_site {
@@ -217,35 +221,35 @@ img {
     margin-bottom: 2em;
     .post_title {
         font-weight: bold;
-        border-bottom: #e2434b dotted 2px;
+        border-bottom: #fff1bc dotted 2px;
         background: none;
-        color: #34222e;
+        color: #6a9c78;
         transition: all 0.5s;
         &:hover {
             color: #fff;
-            background: #34222e;
+            background: #6a9c78;
         }
     }
     .post_info {
         time {
             font-size: 0.8em;
-            background: #e2434b;
+            background: #fff1bc;
             color: #fff;
             padding: 0 5px;
             transition: all 0.5s;
             &:hover {
-                color: #e2434b;
+                color: #e0d9bc;
                 background: none;
             }
         }
         .cat, .tag {
-            color: #f9bf8f;
+            color: #6a9c78;
             font-size: 0.8em;
-            background: #fee9d7;
+            background: #c4e3cb;
             padding: 0 5px;
             transition: all 0.5s;
             &:hover {
-                color: #fee9d7;
+                color: #93cea2;
                 background: none;
             }
         }
@@ -264,14 +268,17 @@ img {
     overflow: auto;
     background: #fff;
     padding: 1em 2em;
+    box-shadow: #fff 0 0 10px;
     .post_title_arch {
         font-weight: bold;
         font-size: 1.3em;
-        border-bottom: #f9bf8f dotted 2px;
-        color: #34222e;
+        border-bottom: #fff1bc dotted 2px;
+        background: none;
+        color: #6a9c78;
         transition: all 0.5s;
         &:hover {
-            color: #cef0b9;
+            color: #fff;
+            background: #6a9c78;
         }
     }
     .archlist {
@@ -290,10 +297,9 @@ img {
             display: block;
         }
         a {
-            color: #000;
             transition: all 0.5s;
             &:hover {
-                color: #f9bf8f;
+                color: #c4e3cb;
             }
         }
     }
@@ -307,17 +313,17 @@ img {
     bottom: 2em;
     padding: 0 10px 0 0;
     .next, .prev {
-        color: #34222e;
+        color: #6a9c78;
     }
     .page-number {
-        color: #34222e;
-        border: #34222e solid 1px;
+        color: #6a9c78;
+        border: #6a9c78 solid 1px;
         padding: 0 8px;
         background: none;
         transition: all 0.5s;
         &:hover {
-            color: #fff;
-            background: #34222e;
+            color: #fff1bc;
+            background: #6a9c78;
         }
     }
 }
@@ -351,16 +357,10 @@ img {
             display: block;
             font-size: 0.8em;
             transition: all 0.5s;
-            &:hover {
-                color: #000000;
-            }
         }
         .about_link {
-            background: #34222e;
-            color: #fee9d7;
             padding: 0 8px;
             &:hover {
-                color: #e2434b;
                 background: #ffffff;
             }
         }
@@ -464,6 +464,8 @@ img {
         font-size: 0.8em;
         line-height: 1.8em;
         text-align: left;
+        max-height: 14em;
+        overflow-y: auto;
     }
 
     .bg_site {
@@ -482,7 +484,6 @@ img {
         margin: 0 0.5em 2em 0.5em;
         position: relative;
         .post_list_site {
-            color: #333;
             max-width: unset;
             margin: 0;
             position: relative;
@@ -493,7 +494,6 @@ img {
             padding: 1em 2em;
         }
         .post_list_arch {
-            color: #333;
             max-width: unset;
             margin: 0;
             position: relative;
@@ -597,7 +597,6 @@ img {
         margin: 0 0.5em 2em 0.5em;
         position: relative;
         .post_list_site {
-            color: #333;
             max-width: unset;
             margin: 0;
             position: relative;
@@ -608,7 +607,6 @@ img {
             padding: 1em;
         }
         .post_list_arch {
-            color: #333;
             max-width: unset;
             margin: 0;
             position: relative;
@@ -711,7 +709,6 @@ img {
         margin: 0 0.5em 2em 0.5em;
         position: relative;
         .post_list_site {
-            color: #333;
             max-width: unset;
             margin: 0;
             position: relative;
@@ -722,7 +719,6 @@ img {
             padding: 1em;
         }
         .post_list_arch {
-            color: #333;
             max-width: unset;
             margin: 0;
             position: relative;
